@@ -1,0 +1,27 @@
+version: '3.9'
+
+services:
+  drachtio-server:
+    image: drachtio/drachtio-server:latest
+    network_mode: host
+    volumes:
+      - ./drachtio.conf.xml:/etc/drachtio/drachtio.conf.xml:ro
+    command: ["/usr/local/sbin/drachtio", "-f", "/etc/drachtio/drachtio.conf.xml"]
+
+  nodejs-bridge:
+    build: .
+    network_mode: host
+    env_file:
+      - .env
+    environment:
+      DRACHTIO_HOST: 127.0.0.1
+      DRACHTIO_PORT: 9022
+      DRACHTIO_SECRET: drachtioSecret
+      SIP_SERVER: vibeacademy.alphapbx.net:8090
+      SIP_EXTENSION: 101
+      SIP_PASSWORD: W4tP8Jg4TFbY47
+      SIP_TRANSPORT: udp
+      SIP_PHONE: 09647749047
+      BRIDGE_API_PORT: 8080
+    depends_on:
+      - drachtio-server
