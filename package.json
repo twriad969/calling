@@ -1,0 +1,15 @@
+{
+  "name": "sip-openai-realtime-bridge",
+  "version": "1.0.0",
+  "description": "Dockerized SIP to OpenAI Realtime API bridge using drachtio",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "chalk": "^4.1.2",
+    "dotenv": "^16.4.5",
+    "drachtio-srf": "^4.7.2",
+    "ws": "^8.17.1"
+  }
+}
