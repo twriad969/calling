@@ -1,0 +1,10 @@
+<drachtio>
+  <admin port="9022" secret="drachtioSecret" />
+  <sip>
+    <udp port="5060" />
+  </sip>
+  <srf>
+    <external-ip>auto</external-ip>
+    <local-net>0.0.0.0/0</local-net>
+  </srf>
+</drachtio>
